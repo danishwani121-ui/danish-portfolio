@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Utility to hide scrollbars where needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print Specific Rules for Resume Generation */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  header, footer, section {
+    display: none !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+}
